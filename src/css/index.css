@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+ @font-face {
+      font-family: 'Lato';
+     
+      src:url('fonts/Lato-Black.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+ @font-face {
+      font-family: 'Abel';
+     
+      src:url('fonts/Abel/Abel-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+     @font-face {
+      font-family: 'Acme';
+     
+      src:url('fonts/Acme/Acme-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+     @font-face {
+      font-family: 'Bebas';
+     
+      src:url('fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+     @font-face {
+      font-family: 'DancingScript';
+     
+      src:url('fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }

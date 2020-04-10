@@ -1,0 +1,50 @@
+.timer{
+	font-family: dancingscript;
+}
+.card-title{
+	font-family: bebas ;
+}
+.card h6{
+	font-size: 1em;
+	font-family: abel;
+}
+.card{
+	cursor: pointer;
+	box-shadow:0px 11px 30px -9px rgba(0, 0, 0, 0.3) !important;
+
+	border-radius: 15px !important;
+	margin-bottom:20px;
+	transition: .3s;
+}
+.text h1::first-letter{
+	text-transform: uppercase;
+}
+.card-text{
+	color: #777777;
+}
+.card a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+.card:hover{
+	box-shadow: 0px 11px 40px -9px rgb(52, 58, 64) !important;
+}
+.card-header{
+	
+	border-top-right-radius: 15px !important;
+	border-top-left-radius: 15px !important;
+}
+.card-footer{
+	border-bottom-right-radius: 15px !important;
+	border-bottom-left-radius: 15px !important;
+	
+}
+.cardt a {
+	color: #303a40;
+	font-family: lato;
+	transition: .3s;
+}
+.cardt a:hover{
+	color: #000;
+}
