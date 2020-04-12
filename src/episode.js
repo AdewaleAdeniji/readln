@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import Card from './card';
 import Stories from './stories.json';
 import Story from './story.json';
-
+import {Link} from 'react-router-dom';
 
 class StoryPoint extends Component	{
 	state =  {
@@ -16,6 +16,10 @@ class StoryPoint extends Component	{
 		nextd:'none',
 		arrnum:[],
 		storyid:0,
+		links:{
+			"prev":"",
+			"next":""
+		}
 	}
 componentDidMount(){
 	if(this.props.match.params.storyid==undefined||this.props.match.params.episode==undefined||this.props.match.params.storyid==""||this.props.match.params.episode==""){
@@ -64,7 +68,12 @@ componentDidMount(){
 
 	}
 
-
+	const linkprev = "episode/"+this.state.storyid+"/"+this.state.episode-1;
+	const linknext = "episode/"+this.state.storyid+"/"+this.state.episode+1;
+	const links = {
+		"prev":linkprev,
+		"next":linknext
+	}
 }	
 	render(){
 		return (
@@ -101,8 +110,9 @@ componentDidMount(){
 			                I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.
 			                </p>
 			                <div class="pagination pagination-2"  style={{"paddingTop":"20%"}}>
+
 								<Link
-									 to="episode/"+{this.state.storyid}+"/"+{this.state.episode-1} 
+									 to={this.state.links.prev} 
 										class="pageitem"
 											 style={{"float":"left","display":this.state.prevd}}
 								>Previous
@@ -110,7 +120,7 @@ componentDidMount(){
 					          
 					              {
 					              	this.state.arrnum.map((item,index)=>{
-					              		let link = "episode/"+this.state.storyid+"/"+parseInt(item+!);
+					              		let link = "episode/"+this.state.storyid+"/"+parseInt(item+1);
 					              		if(item==this.state.episode){
 					              			var active ='active';
 					              		}
@@ -122,10 +132,10 @@ componentDidMount(){
 					              }
 					             
 					             <Link
-									 to="episode/"+{this.state.storyid}+"/"+{this.state.episode+1}
+									 to={this.state.links.next} 
 									  className="pageitem" style={{"float":"right","display":this.state.nextd}}>
 									  Next
-									  </a>
+									  </Link>
 							</div>
 			            </div>
 					</div>
